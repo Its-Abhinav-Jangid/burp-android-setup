@@ -142,11 +142,12 @@ Uninstall original app first:
 ```
 adb uninstall com.example.app
 ```
+Enable "install from usb" in the Android device via developer options
 
 Then install patched version:
 
 ```
-adb install apks_merged-patched.apk
+adb shell pm install -r -i com.android.vending apks_merged-patched.apk
 ```
 
 If install fails, make sure the original app is fully removed.
